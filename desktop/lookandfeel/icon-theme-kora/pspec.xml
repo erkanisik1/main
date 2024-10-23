@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>icon-theme-kora</Name>
+        <Homepage>http://www.pisilinux.org/</Homepage>
+        <Packager>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>PisiLinux için görsel çalışmaları.</Summary>
+        <Description>PisiLinux için simge seti</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <!-- 
+                <Dependency>qt6-base-devel</Dependency>
+            -->
+           
+        </BuildDependencies>
+        <Archive sha1sum="340de2f00e795e4c967f37ff1fedb97e39bf0196" type="targz">https://github.com/erkanisik1/kora-icons/archive/refs/tags/0.1.tar.gz</Archive>
+       
+    </Source>
+    <Package>
+        <Name>icon-theme-kora</Name>
+        <Summary>PisiLinux için görsel çalışmaları.</Summary>
+        <Files>            
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files> 
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-10-24</Date>
+            <Version>0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

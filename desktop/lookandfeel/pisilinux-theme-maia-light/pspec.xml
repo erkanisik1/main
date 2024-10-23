@@ -15,22 +15,32 @@
             <Dependency>qt6-base-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="46eaaceadcaf57df4ba5cc39bf20a80cb7d01c94" type="targz">https://github.com/erkanisik1/pisilinux-theme-maia-light/archive/refs/tags/1.0.tar.gz</Archive>     
+        <Archive sha1sum="25d6ecec369f043dcb5599ec24101d99264ffff7" type="targz">https://github.com/erkanisik1/pisilinux-theme-maia-light/archive/refs/tags/1.1.tar.gz</Archive>     
     </Source>
     <Package>
         <Name>pisilinux-theme-maia-light</Name>
         <Summary>PisiLinux için kde plasma6 teması.</Summary>
+            <RuntimeDependencies>
+                <Dependency>icon-theme-kora</Dependency>
+            </RuntimeDependencies>
+
         <Files>
             <Path fileType="data">/usr/share</Path>
             <Path fileType="data">/usr/share/color-schemes</Path>
-            <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="data">/usr/share/plasma</Path>
             <Path fileType="data">/usr/share/sddm</Path>
             <Path fileType="data">/usr/share/wallpapers</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files> 
     </Package>
-    <History>       
+    <History> 
+         <Update release="2">
+            <Date>2024-10-24</Date>
+            <Version>1.1</Version>
+            <Comment>version bump.</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>      
         <Update release="1">
             <Date>2024-10-04</Date>
             <Version>1.0</Version>
