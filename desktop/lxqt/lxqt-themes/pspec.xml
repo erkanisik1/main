@@ -13,16 +13,16 @@
         <Icon>lxqt</Icon>
         <Summary>LXQt themes, graphics and icons.</Summary>
         <Description>LXQt themes, graphics and icons</Description>
-        <Archive sha1sum="9396056b6e325a67f764d1abe51f4e801d443db3" type="tarxz">https://github.com/lxqt/lxqt-themes/releases/download/2.0.0/lxqt-themes-2.0.0.tar.xz</Archive>
+        <Archive sha1sum="a296913cd697e0068f0f0c3044e88732b78d3d71" type="tarxz">https://github.com/lxqt/lxqt-themes/releases/download/2.1.0/lxqt-themes-2.1.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>kwindowsystem-kf6-devel</Dependency>
-            <Dependency versionFrom="2.0.0">liblxqt-devel</Dependency>
+            <Dependency versionFrom="2.1.0">liblxqt-devel</Dependency>
             <Dependency>qt6-linguist</Dependency>
-            <Dependency versionFrom="2.0.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="2.1.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
         <Patches>
-            <Patch>themes.patch</Patch>
+            <Patch>karagul-themes.patch</Patch>
         </Patches>
     </Source>
     <Package>
@@ -42,12 +42,20 @@
 <!--  Adds pisi startup icon and wallpaper to Themes  -->
             <AdditionalFile permission="0644" owner="root" target="/usr/share/icons/hicolor/scalable/places/start-here-light.svg">start-here-light.svg</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/usr/share/icons/hicolor/scalable/places/start-here-dark.svg">start-here-dark.svg</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/wallpapers/karagul.jpg">karagul.jpg</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/wallpapers/Crocus-Ancyrensis.jpg">Crocus-Ancyrensis.jpg</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/wallpapers/Crocus-Ancyrensis-2.jpg">Crocus-Ancyrensis-2.jpg</AdditionalFile>
         </AdditionalFiles>
     </Package>
     
     <History>
+        <Update release="18">
+            <Date>2024-11-05</Date>
+            <Version>2.1.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="17">
             <Date>2024-04-18</Date>
             <Version>2.0.0</Version>

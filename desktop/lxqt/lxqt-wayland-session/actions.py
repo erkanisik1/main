@@ -6,19 +6,21 @@
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-    cmaketools.configure("-DCMAKE_BUILD_TYPE=Release \
-                -DCMAKE_INSTALL_PREFIX=/usr \
-                -DKDE_INSTALL_LIBDIR=lib \
-                -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-                -DBUILD_TESTING=OFF")
+    shelltools.system("mkdir build")
+    shelltools.cd("build")
+    cmaketools.configure(sourceDir="..")
 
 def build():
+    shelltools.cd("build")
     cmaketools.make()
 
 def install():
+    shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    
+    shelltools.cd("..")
+    pisitools.dodoc("README*")
