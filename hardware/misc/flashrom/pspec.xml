@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>flashrom</Name>
-        <Homepage>https://www.flashrom.org/</Homepage>
+        <Homepage>https://www.flashrom.org</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -13,13 +13,15 @@
         <Summary>Utility for reading, writing, erasing and verifying flash ROM chips</Summary>
         <Icon>flashrom</Icon>
         <Description>Flash çip içeriğini okumak/yazmak için basit program</Description>
-        <Archive sha1sum="4e863c865a8204639add9532b4c8913db46a6501" type="tarbz2">https://download.flashrom.org/releases/flashrom-v1.2.tar.bz2</Archive>
+        <Archive sha1sum="98e26d1d79cb9fa417bb628355e1699ba15fd31b" type="tarxz">https://download.flashrom.org/releases/flashrom-v1.4.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>meson</Dependency>
             <Dependency>dmidecode</Dependency>
+            <Dependency>cmocka-devel</Dependency>
             <Dependency>libusb-devel</Dependency>
             <Dependency>libftdi-devel</Dependency>
             <Dependency>pciutils-devel</Dependency>
+            <Dependency>python3-sphinx</Dependency>
         </BuildDependencies>
         <!--
         <Patches>
@@ -32,13 +34,14 @@
     <Package>
         <Name>flashrom</Name>
         <RuntimeDependencies>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libftdi-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libftdi</Dependency>
+            <Dependency>pciutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -56,6 +59,13 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2024-11-29</Date>
+            <Version>1.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2022-07-23</Date>
             <Version>1.2</Version>

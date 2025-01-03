@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>wine-staging</Name>
-        <Homepage>http://www.winehq.org/</Homepage>
+        <Homepage>https://www.winehq.org</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -12,9 +12,10 @@
         <IsA>app:console</IsA>
         <Summary>WINE Is Not An Emulator, which lets you run Microsoft Windows applications - staging version.</Summary>
         <Description>Wine allows running Windows 3.*, Windows 95/98 and Windows NT programs on a i386 (or compatible) machine running X11. It is still alpha level code; don't expect everything to work.</Description>
-        <Archive sha1sum="216615aea4f88afdb5ac9df0af156296482e03c8" type="tarxz">https://dl.winehq.org/wine/source/8.x/wine-8.18.tar.xz</Archive>
-		<Archive sha1sum="7f449f0fb7687392aabb099877792803227cc1c8" type="targz" target="wine-8.18">https://github.com/wine-staging/wine-staging/archive/refs/tags/v8.18.tar.gz</Archive>
+        <Archive sha1sum="5ea8e766533c4e97e015a98f7d28872b1fdd966e" type="tarxz">https://dl.winehq.org/wine/source/9.x/wine-9.22.tar.xz</Archive>
+		<Archive sha1sum="436509bd6dbc127a91d43f1816c5ebdc2eebd4f6" type="targz" target="wine-9.22">https://github.com/wine-staging/wine-staging/archive/refs/tags/v9.22.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>git</Dependency>
             <Dependency>mit-kerberos-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>
             <Dependency>libao-devel</Dependency>
@@ -74,6 +75,16 @@
             <Dependency>libpcap-devel</Dependency>
             <Dependency>util-linux</Dependency>
             <Dependency>ncurses-devel</Dependency>
+
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>pcsc-lite-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+
+            <Dependency>compiler-rt</Dependency>
+            <Dependency>lldb-devel</Dependency>
+            <Dependency>lld-devel</Dependency>
         </BuildDependencies>
         
         <Patches>
@@ -130,6 +141,11 @@
             <Dependency>cabextract</Dependency>
             <Dependency>libpcap</Dependency>
             <Dependency>libunwind</Dependency>
+
+            <Dependency>wayland</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>pcsc-lite</Dependency>
+            <Dependency>libxkbcommon</Dependency>
         </RuntimeDependencies>
 		<Replaces>
 <!--             <Package>wine</Package> -->
@@ -289,6 +305,13 @@
     </Package>
 
     <History>
+	<Update release="5">
+            <Date>2024-11-29</Date>
+            <Version>9.22</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ümit Solmaz</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update> 
         <Update release="4">
             <Date>2023-10-14</Date>
             <Version>8.18</Version>

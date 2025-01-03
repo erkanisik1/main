@@ -15,15 +15,17 @@
         <Icon>cinnamon</Icon>
         <Summary>Linux desktop which provides advanced innovative features and a traditional user experience</Summary>
         <Description>Linux desktop which provides advanced innovative features and a traditional user experience</Description>
-        <Archive sha1sum="4d205802a8973d0a2c541670bc06dbb936dfcd2a" type="targz">https://github.com/linuxmint/cinnamon/archive/refs/tags/6.2.9.tar.gz</Archive>
+        <Archive sha1sum="fffd665a0f61f16bf588c102152853551f0ff36e" type="targz">https://github.com/linuxmint/cinnamon/archive/refs/tags/6.4.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cjs-devel</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>samurai</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-menus-devel</Dependency>
-            <Dependency versionFrom="6.2.0">muffin-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency versionFrom="6.4.0">cinnamon-menus-devel</Dependency>
+            <Dependency versionFrom="6.4.0">muffin-devel</Dependency>
             <Dependency>clutter-devel</Dependency>
+            <Dependency>gcr-devel</Dependency>
             <Dependency>cogl-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>dbus-glib-devel</Dependency>
@@ -42,11 +44,11 @@
             <Dependency>libnma-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>python3-devel</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-desktop-devel</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-session</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-settings-daemon-devel</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-screensaver-devel</Dependency>
-            <Dependency versionFrom="6.2.0">cinnamon-control-center-devel</Dependency>
+            <Dependency versionFrom="6.4.1">cinnamon-desktop-devel</Dependency>
+            <Dependency versionFrom="6.4.0">cinnamon-session</Dependency>
+            <Dependency versionFrom="6.4.0">cinnamon-settings-daemon-devel</Dependency>
+            <Dependency versionFrom="6.4.0">cinnamon-screensaver-devel</Dependency>
+            <Dependency versionFrom="6.4.0">cinnamon-control-center-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
             <Dependency>spidermonkey-devel</Dependency>
@@ -72,6 +74,7 @@
             <Dependency>gst-plugins-base-devel</Dependency>
             <Dependency>librsvg-devel</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>python3-libsass</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>autostart.patch</Patch>
@@ -117,6 +120,8 @@
             <Dependency>blueberry</Dependency>
             <Dependency>mintlocale</Dependency>
             <Dependency>cjs</Dependency>
+            <Dependency>gcr</Dependency>
+            <Dependency>libsecret</Dependency>
             <Dependency>system-config-printer</Dependency>
             <Dependency>system-config-printer-gtk</Dependency>
             <Dependency>spidermonkey</Dependency>
@@ -163,6 +168,7 @@
             <Dependency>notify-python</Dependency>
             <Dependency>gnome-terminal</Dependency>
             <Dependency>gvfs</Dependency>
+            <Dependency>python3-libsass</Dependency>
             <Dependency>gsettings-desktop-schemas</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -194,11 +200,40 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/cinnamon/applets/menu@cinnamon.org/settings-schema.json">menu.json</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/icons/hicolor/scalable/apps/pisi-logo.svg">pisi-logo.svg</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/backgrounds/cinnamon/pisi-crocus-ancyrensis.png">pisi-crocus-ancyrensis.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/backgrounds/cinnamon/karagul.jpg">karagul.jpg</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/glib-2.0/schemas/cinnamon-pisilinux.gschema.override">cinnamon-pisilinux.gschema.override</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="36">
+            <Date>2024-12-19</Date>
+            <Version>6.4.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="35">
+            <Date>2024-12-05</Date>
+            <Version>6.4.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="34">
+            <Date>2024-12-03</Date>
+            <Version>6.4.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="33">
+            <Date>2024-11-28</Date>
+            <Version>6.4.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="32">
             <Date>2024-08-09</Date>
             <Version>6.2.9</Version>

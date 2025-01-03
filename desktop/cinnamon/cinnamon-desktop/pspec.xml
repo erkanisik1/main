@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Library with common API for various Cinnamon modules</Summary>
         <Description>Library with common API for various Cinnamon modules</Description>
-        <Archive sha1sum="aaf35ffb58dd78d551f6a8f2c0f6d13ce26b2368" type="targz">https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/6.2.0.tar.gz</Archive>
+        <Archive sha1sum="4848d0cf03d6935f0fe3062952a283e4d5fcf806" type="targz">https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/6.4.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>meson</Dependency>
             <Dependency>samurai</Dependency>
@@ -32,7 +32,9 @@
             <Dependency>libxkbfile-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
+            <Dependency>iso-codes-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">config.patch</Patch>
@@ -43,6 +45,7 @@
         <Name>cinnamon-desktop</Name>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
+            <Dependency>eudev</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
@@ -90,6 +93,20 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>2024-12-03</Date>
+            <Version>6.4.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="10">
+            <Date>2024-11-27</Date>
+            <Version>6.4.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="9">
             <Date>2024-06-12</Date>
             <Version>6.2.0</Version>

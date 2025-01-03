@@ -12,8 +12,9 @@
         <IsA>library</IsA>
         <Summary>Versatile file searching tool</Summary>
         <Description>Çok yönlü dosya arama aracı </Description>
-        <Archive sha1sum="96280b3b260e46f96d7c824c4db8dba6f8abfecc" type="tarbz2">https://archive.xfce.org/src/apps/catfish/4.18/catfish-4.18.0.tar.bz2</Archive>
+        <Archive sha1sum="d92b63d50a9391e6718ed22bbf66d53c9385347b" type="tarbz2">https://archive.xfce.org/src/apps/catfish/4.20/catfish-4.20.0.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>meson</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>xdg-utils</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -23,6 +24,7 @@
             <Dependency>python3-pexpect</Dependency>
             <Dependency>python3-cairo-devel</Dependency>
             <Dependency>python3-ptyprocess</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
             <Dependency>python3-pygobject3-devel</Dependency>
             <Dependency>python3-distutils-extra</Dependency>
         </BuildDependencies>
@@ -62,6 +64,13 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>2024-12-25</Date>
+            <Version>4.20.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="7">
             <Date>2023-10-17</Date>
             <Version>4.18.0</Version>

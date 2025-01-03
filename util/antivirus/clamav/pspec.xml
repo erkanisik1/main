@@ -50,7 +50,7 @@
             <!-- <Dependency>libmilter</Dependency> -->
         </RuntimeDependencies>
         <Files>
-            <Path fileType="cfgfiles">/etc/clamav</Path>
+            <Path fileType="config">/etc/clamav</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -75,7 +75,7 @@
             <Dependency release="current">clamav</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="cfgfiles">/etc/clamav/freshclam.conf</Path>
+            <Path fileType="config">/etc/clamav/freshclam.conf</Path>
             <Path fileType="executable">/usr/bin/freshclam</Path>
             <Path fileType="data">/usr/lib/libfreshclam.so</Path>
             <Path fileType="data">/usr/lib/libfreshclam.so.2</Path>
@@ -100,6 +100,13 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>2023-12-19</Date>
+            <Version>1.2.1</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
         <Update release="7">
             <Date>2023-11-04</Date>
             <Version>1.2.1</Version>

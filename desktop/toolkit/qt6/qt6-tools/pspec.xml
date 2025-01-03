@@ -11,7 +11,7 @@
         <Summary>A cross-platform application and UI framework (Development Tools, QtHelp)</Summary>
         <Description>A cross-platform application and UI framework (Development Tools, QtHelp)</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="6ff814802d972f5823a8bcaa7032dcdd16850dc7" type="tarxz">https://download.qt.io/official_releases/qt/6.7/6.7.3/submodules/qttools-everywhere-src-6.7.3.tar.xz</Archive>
+        <Archive sha1sum="b8ec9e68c33fcf75d40cbfaeeac2181f2f6598dd" type="tarxz">https://download.qt.io/official_releases/qt/6.8/6.8.1/submodules/qttools-everywhere-src-6.8.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>ninja</Dependency>
             <Dependency>cmake</Dependency>
@@ -23,15 +23,15 @@
             <Dependency versionFrom="11.0.0">lld-devel</Dependency>
             <Dependency versionFrom="11.0.0">llvm-mlir</Dependency>
             <Dependency versionFrom="11.0.0">llvm-polly</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-base-devel</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-sql-sqlite</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-sql-mysql</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-sql-odbc</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-base-devel</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-sql-postgresql</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-base-devel</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-sql-sqlite</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-sql-mysql</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-sql-odbc</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-base-devel</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-sql-postgresql</Dependency>
             <Dependency>icon-theme-hicolor</Dependency>
             <Dependency>vulkan-headers</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-declarative-devel</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-declarative-devel</Dependency>
         </BuildDependencies>
         <Patches>
 <!--             <Patch level="1">d52c5f524e43ec103ea6d13f17dc4638460c1405.diff</Patch> --> -->
@@ -45,9 +45,9 @@
             <Dependency>libgcc</Dependency>
             <Dependency>llvm-libs</Dependency>
             <Dependency>llvm-clang</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-base</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-sql-sqlite</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-declarative</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-base</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-sql-sqlite</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/qdistancefieldgenerator-qt6</Path>
@@ -69,6 +69,7 @@
             <Path fileType="library">/usr/lib/cmake/Qt6Help</Path>
             <Path fileType="library">/usr/lib/libQt6Help*</Path>
             <Path fileType="library">/usr/lib/libQt6CLucene*</Path>
+<!--             <Path fileType="library">/usr/lib/qt6/sbom/qttools-*.spdx</Path> -->
             <Path fileType="library">/usr/lib/metatypes/qt6help_relwithdebinfo_metatypes.json</Path>
             <Path fileType="library">/usr/lib/qt6/metatypes/qt6help_relwithdebinfo_metatypes.json</Path>
             <Path fileType="library">/usr/lib/qt6/metatypes/qt6uitools_relwithdebinfo_metatypes.json</Path>
@@ -111,7 +112,7 @@
     <Package>
         <Name>qt6-assistant-devel</Name>
         <RuntimeDependencies>
-            <Dependency versionFrom="6.7.3">qt6-base-devel</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-base-devel</Dependency>
             <Dependency release="current">qt6-assistant</Dependency>
             <Dependency versionFrom="10.0.1">llvm-clang-devel</Dependency>
         </RuntimeDependencies>
@@ -139,8 +140,8 @@
         <Name>qt6-designer</Name>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-base</Dependency>
-            <Dependency versionFrom="6.7.3">qt6-declarative</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-base</Dependency>
+            <Dependency versionFrom="6.8.1">qt6-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/designer-qt6</Path>
@@ -202,6 +203,7 @@
 
             <Path fileType="data">/usr/share/qt6/modules/Designer.json</Path>
             <Path fileType="data">/usr/share/qt6/modules/DesignerComponents.json</Path>
+            <Path fileType="library">/usr/lib/qt6/sbom/qttools-*.spdx</Path>
         </Files>
          <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/designer6.desktop">designer.desktop</AdditionalFile>
@@ -307,6 +309,13 @@
     </Package>
 
     <History>
+        <Update release="15">
+            <Date>2024-12-02</Date>
+            <Version>6.8.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="14">
             <Date>2024-09-27</Date>
             <Version>6.7.3</Version>

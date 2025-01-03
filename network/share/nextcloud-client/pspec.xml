@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>The Nextcloud Client</Summary>
         <Description>Nextcloud-client enables you to connect to your private Nextcloud Server. With it you can create folders in your home directory, and keep the contents of those folders synced with your Nextcloud server.</Description>
-        <Archive sha1sum="7730d7294609499fbbcbd8721e2581b264ceddf1" type="targz">https://github.com/nextcloud/desktop/archive/refs/tags/v3.6.4.tar.gz</Archive>
+        <Archive sha1sum="6ee5048ad693e2fbe7c770eba22976c46784c6dc" type="targz">https://github.com/nextcloud/desktop/archive/refs/tags/v3.15.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>check-devel</Dependency>
             <Dependency>chrpath</Dependency>
@@ -27,21 +27,27 @@
             <Dependency>openssl-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
             <Dependency>python3-sphinx</Dependency>
-            <Dependency>qt5-keychain-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-xmlpatterns-devel</Dependency>
-            <Dependency>qt5-location-devel</Dependency>
-            <Dependency>qt5-quickcontrols2-devel</Dependency>
-            <Dependency>qt5-websockets-devel</Dependency>
-            <Dependency>qt5-svg-devel</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt6-keychain-devel</Dependency>
+            <Dependency>qt6-5compat-devel</Dependency>
+            <Dependency>qt6-base-devel</Dependency>
+            <Dependency>qt6-location-devel</Dependency>
+            <Dependency>qt6-websockets-devel</Dependency>
+            <Dependency>qt6-svg-devel</Dependency>
+            <Dependency>qt6-declarative-devel</Dependency>
+            <Dependency>qt6-linguist</Dependency>
+            <Dependency>extra-cmake-modules-kf6</Dependency>
             <Dependency>inkscape</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>kio-devel</Dependency>
+            <Dependency>kguiaddons-kf6-devel</Dependency>
+            <Dependency>kcoreaddons-kf6-devel</Dependency>
+            <Dependency>karchive-kf6-devel</Dependency>
+            <Dependency>kio-kf6-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>libgnome-keyring</Dependency>
+            <Dependency>qt6-sql-mysql</Dependency>
+            <Dependency>qt6-sql-sqlite</Dependency>
+            <Dependency>qt6-sql-odbc</Dependency>
+            <Dependency>qt6-sql-postgresql</Dependency>
+            <Dependency>qt6-webengine-devel</Dependency>
         </BuildDependencies>
         <Patches>
 <!--             <Patch level="1">xcb.patch</Patch> -->
@@ -56,16 +62,18 @@
             <Dependency>libgcc</Dependency>
             <Dependency>sqlite</Dependency>
             <Dependency>openssl</Dependency>
-            <Dependency>qt5-svg</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-keychain</Dependency>
-            <Dependency>qt5-websockets</Dependency>
+            <Dependency>qt6-svg</Dependency>
+            <Dependency>qt6-base</Dependency>
+            <Dependency>qt6-keychain</Dependency>
+            <Dependency>qt6-websockets</Dependency>
+            <Dependency>qt6-webengine</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/Nextcloud</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/libnextcloudsync.so*</Path>
 <!--             <Path fileType="library">/usr/lib/libnextcloudsync.so.3.3.2</Path> -->
+            <Path fileType="library">/usr/lib/qt6</Path>
             <Path fileType="library">/usr/lib/libnextcloud_csync.so*</Path>
             <Path fileType="data">/usr/share/appdata</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -102,8 +110,8 @@
         <RuntimeDependencies>
             <Dependency release="current">nextcloud-client</Dependency>
             <Dependency>dolphin</Dependency>
-            <Dependency>kio</Dependency>
-            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kio-kf6</Dependency>
+            <Dependency>kcoreaddons-kf6</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libnextclouddolphinpluginhelper.so</Path>
@@ -156,6 +164,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2024-12-28</Date>
+            <Version>3.15.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2023-01-07</Date>
             <Version>3.6.4</Version>

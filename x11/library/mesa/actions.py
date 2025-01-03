@@ -15,7 +15,6 @@ def setup():
                -Ddri-drivers-path=%s/xorg/modules/dri \
                -Db_ndebug=true \
                -Dplatforms=x11,wayland \
-               -Ddri3=enabled \
                -Dgallium-extra-hud=true \
                -Dgallium-vdpau=enabled \
                -Dgallium-va=enabled \
@@ -58,9 +57,10 @@ def setup():
         #shelltools.export("CXX", "clang++")
         pisitools.cflags.add("-m64 ")
         pisitools.cxxflags.add("-m64")
-        options += " -Dgallium-omx=bellagio -Dgallium-opencl=icd -Dlmsensors=enabled -Dzstd=enabled \
+        options += " -Dgallium-opencl=icd -Dlmsensors=enabled -Dzstd=enabled \
                              -Dgallium-rusticl=true \
                              -Drust_std=2021 \
+                             -Dvulkan-layers=screenshot \
                              -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau,swrast,virtio \
                              -Dgallium-drivers=r300,r600,nouveau,radeonsi,svga,iris,llvmpipe,softpipe,virgl,crocus,i915,zink,d3d12"
     
