@@ -27,7 +27,6 @@
         <RuntimeDependencies>
             <Dependency>python3</Dependency>
             <Dependency>python3-attrs</Dependency>
-            <Dependency>python3-twisted</Dependency>
             <Dependency>python3-graphviz</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -41,7 +40,7 @@
         <Update release="1">
             <Date>2025-01-06</Date>
             <Version>22.10.0</Version>
-            <Comment>First release</Comment>
+            <Comment>First release.</Comment>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Update>
