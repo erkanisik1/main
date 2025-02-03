@@ -45,7 +45,6 @@
         <Name>sddm-kcm</Name>
         <RuntimeDependencies>
             <Dependency>kcoreaddons</Dependency>
-            <Dependency>sddm</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>kconfigwidgets</Dependency>
@@ -61,6 +60,12 @@
             <Dependency>kservice</Dependency>
             <Dependency versionFrom="6.7.1">qt6-declarative</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
+            <AnyDependency>
+                <Dependency>sddm</Dependency>
+                <Dependency>lightdm</Dependency>
+                <Dependency>gdm</Dependency>
+                <Dependency>lxdm</Dependency>
+            </AnyDependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/dbus-1/system.d</Path>
@@ -83,7 +88,7 @@
     </Package>
 
     <History>
-        <Update release="82">
+        <Update release="83">
             <Date>2025-01-01</Date>
             <Version>6.2.5</Version>
             <Comment>First release</Comment>

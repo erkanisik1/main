@@ -13,11 +13,11 @@
         <Icon>lxqt</Icon>
         <Summary>The LXQt application launcher</Summary>
         <Description>Tool used to launch programs quickly by typing their names</Description>
-        <Archive sha1sum="c0f4affa0dc099709b155f2ddf51b3115e09b518" type="tarxz">https://github.com/lxqt/lxqt-runner/releases/download/2.1.1/lxqt-runner-2.1.1.tar.xz</Archive>
+        <Archive sha1sum="de3f3335114a0b676ebe120906a36e80f7cb7474" type="tarxz">https://github.com/lxqt/lxqt-runner/releases/download/2.1.2/lxqt-runner-2.1.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>kwindowsystem-kf6-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
             <Dependency versionFrom="2.1.0">liblxqt-devel</Dependency>
@@ -28,7 +28,7 @@
             <Dependency>qt6-linguist</Dependency>
             <Dependency>qt6-svg-devel</Dependency>
             <Dependency>muparser-devel</Dependency>
-            <Dependency>layer-shell-qt-kf6-devel</Dependency>
+            <Dependency>layer-shell-qt-devel</Dependency>
             <Dependency versionFrom="2.1.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
@@ -36,7 +36,7 @@
     <Package>
         <Name>lxqt-runner</Name>
         <RuntimeDependencies>
-            <Dependency>kwindowsystem-kf6</Dependency>
+            <Dependency>kwindowsystem</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
@@ -44,7 +44,7 @@
             <!--Dependency>menu-cache</Dependency-->
             <Dependency>qt6-base</Dependency>
             <Dependency>muparser</Dependency>
-            <Dependency>layer-shell-qt-kf6</Dependency>
+            <Dependency>layer-shell-qt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -54,6 +54,20 @@
     </Package>
 
     <History>
+        <Update release="23">
+            <Date>2025-01-30</Date>
+            <Version>2.1.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+        <Update release="22">
+            <Date>2025-01-23</Date>
+            <Version>2.1.1</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="21">
             <Date>2025-01-11</Date>
             <Version>2.1.1</Version>
