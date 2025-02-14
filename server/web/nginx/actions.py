@@ -31,7 +31,7 @@ def setup():
                             --error-log-path=/var/log/nginx/error.log \
                             --http-log-path=/var/log/nginx/access.log \
                             --with-http_ssl_module \
-                            --with-http_perl_module})
+                            --with-http_perl_module")
 
 
 def build():
