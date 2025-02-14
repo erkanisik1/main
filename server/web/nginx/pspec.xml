@@ -45,6 +45,7 @@
             <Path fileType="data">/var/www/nginx</Path>
             <Path fileType="data">/var/log/nginx</Path>
             <Path fileType="data">/run</Path>
+            <Path fileType="data">/usr/local/nginx/</Path>
             <Path fileType="data">/var/lib/nginx/client_body</Path>
             <Path fileType="data">/var/lib/nginx/fastcgi</Path>
             <Path fileType="data">/var/lib/nginx/proxy</Path>
