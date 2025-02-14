@@ -21,6 +21,7 @@
             <Dependency>libxslt-devel</Dependency>
             <Dependency>libpcre-devel</Dependency>
             <Dependency>openssl-devel</Dependency>
+            <Dependency>python3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,6 +36,7 @@
             <Dependency>libpcre</Dependency>
             <Dependency>openssl</Dependency>
             <Dependency>libxml2</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/nginx</Path>
