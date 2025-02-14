@@ -58,4 +58,4 @@ def install():
     # pisitools.remove("/usr/lib/perl5/site_perl/*/*/*/*/.packlist")
     pisitools.remove("/etc/nginx/mime.types")
 
-    pisitools.dodoc("README", "LICENSE")
+    #pisitools.dodoc("README", "LICENSE")
