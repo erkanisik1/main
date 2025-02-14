@@ -21,17 +21,39 @@ ERROR_LOG    = '%s/error.log' % LOG_DIR
 ACCESS_LOG   = '%s/access.log' % LOG_DIR
 
 def setup():
-   
-
-    autotools.rawConfigure("--prefix=/usr/local/nginx \
-                            --sbin-path=/usr/local/nginx/sbin/nginx \
-                            --conf-path=/etc/nginx/nginx.conf \
-                            --pid-path=/run/nginx.pid \
-                            --lock-path=/run/nginx.lock \
-                            --error-log-path=/var/log/nginx/error.log \
-                            --http-log-path=/var/log/nginx/access.log \
+    autotools.rawConfigure("--user=nginx \
+                            --group=nginx \
+                            --prefix=%(html)s \
+                            --sbin-path=/usr/sbin/nginx \
+                            --conf-path=%(conf)s \
+                            --pid-path=%(pid)s \
+                            --lock-path=%(lock)s \
+                            --error-log-path=%(error)s \
+                            --http-log-path=%(access)s \
+                            --http-client-body-temp-path=%(home)s/client_body \
+                            --http-proxy-temp-path=%(home)s/proxy \
+                            --http-fastcgi-temp-path=%(home)s/fastcgi \
+                            --with-ipv6 \
                             --with-http_ssl_module \
-                            --with-http_perl_module")
+                            --with-http_realip_module \
+                            --with-http_addition_module \
+                            --with-http_xslt_module \
+                            --with-http_image_filter_module \
+                            --with-http_geoip_module \
+                            --with-http_sub_module \
+                            --with-http_dav_module \
+                            --with-http_flv_module \
+                            --with-http_gzip_static_module \
+                            --with-http_stub_status_module \
+                            --with-http_perl_module \
+                            --with-mail \
+                            --with-mail_ssl_module" % {'html': NGINX_HTML, \
+                                                       'conf': NGINX_CONF, \
+                                                       'pid': NGINX_PID, \
+                                                       'lock': NGINX_LOCK, \
+                                                       'error': ERROR_LOG, \
+                                                       'access': ACCESS_LOG, \
+                                                       'home': NGINX_HOME})
 
 
 def build():
@@ -44,7 +66,7 @@ def install():
     pisitools.dodir("/etc/nginx/conf.d")
 
     # Remove empty dir
-    pisitools.removeDir("/usr/lib/perl5/%s" % get.curPERL())
+    #pisitools.removeDir("/usr/lib/perl5/%s" % get.curPERL())
 
     # Add log dir and touch them :) Nginx needs pre-defined *.log files
     pisitools.dodir(LOG_DIR)
