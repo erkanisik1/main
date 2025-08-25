@@ -62,7 +62,7 @@
             <Dependency>libcdio-paranoia-devel</Dependency>
             <Dependency>jack-audio-connection-kit-devel</Dependency>
             <Dependency versionFrom="2.0">libcdio-devel</Dependency>
-            <Dependency versionFrom="4.3">audacious-devel</Dependency>
+            <Dependency versionFrom="4.5">audacious-devel</Dependency>
         </BuildDependencies>
     </Source>
 
