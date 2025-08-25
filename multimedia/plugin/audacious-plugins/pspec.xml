@@ -12,7 +12,7 @@
         <IsA>data</IsA>
         <Summary>plugins for audacious</Summary>
         <Description>plugins for audacious</Description>
-        <Archive sha1sum="7039a4766b8b607b4664276efa2805519dcf5c12" type="tarbz2">
+        <Archive sha1sum="c4558a0afa19924f9991498504b7b31c595323b2" type="tarbz2">
             https://distfiles.audacious-media-player.org/audacious-plugins-4.5.tar.bz2
         </Archive>
         <BuildDependencies>
