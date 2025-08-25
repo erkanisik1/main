@@ -119,6 +119,7 @@
             <Dependency>libcdio-paranoia</Dependency>
             <Dependency>jack-audio-connection-kit</Dependency>
             <Dependency versionFrom="2.0">libcdio</Dependency>
+            <Dependency>audacious</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/audacious</Path>
