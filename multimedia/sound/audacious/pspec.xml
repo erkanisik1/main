@@ -40,6 +40,7 @@
             <Dependency>qt6-base</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libarchive</Dependency>
+            <Dependency>audacious-plugins</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
