@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>libvirt python3 binding</Summary>
         <Description>The libvirt-python package provides a module that permits applications written in the Python 3.x programming language to call the interface supplied by the libvirt library, to manage the virtualization capabilities of recent versions of Linux (and other OSes).</Description>
-        <Archive sha1sum="eb9293ffe770d0e4603463dff5a8a1d897f0ee05" type="targz">https://files.pythonhosted.org/packages/b9/79/10b58f0ea84aab19c4d5af0d41b7ffdd86cdbea14201cb1c83a94a743521/libvirt-python-11.7.0.tar.gz</Archive>
+        <Archive sha1sum="8a95b245f8460d9b7b5a01969a0cfb810443be32" type="targz">https://files.pythonhosted.org/packages/6c/9e/7211301d1d53acfaa5f99bec4af279e575c31e0aca7e2fe84a5aaa73d8f9/libvirt_python-12.8.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libvirt-devel</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -35,6 +35,13 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>2026-11-18</Date>
+            <Version>12.8.0</Version>
+            <Comment>Version bump to 12.8.0, rebuild for python 3.14 and libvirt 12.8.0.</Comment>
+            <Name>Erkan Isik</Name>
+            <Email>erkanisik@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2025-09-07</Date>
             <Version>11.7.0</Version>

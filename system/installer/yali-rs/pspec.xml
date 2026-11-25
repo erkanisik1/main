@@ -12,8 +12,8 @@
         <IsA>app:gui</IsA>
         <Summary>Yet Another Linux Installer</Summary>
         <Description>The Yalı application, originally written in Python and Qt, has been rewritten using Rust and egui.</Description>
-        <Archive sha1sum="c5dff38f131c2702125159b52f56747cc051792f" type="targz">
-            https://gitlab.com/erkanisik/yali-rs/-/archive/v4.0.2/yali-rs-v4.0.2.tar.gz
+        <Archive sha1sum="f29efe97ece66d2244c540297f9980ecc924ad45" type="targz">
+            https://gitlab.com/erkanisik/yali-rs/-/archive/v4.0.3/yali-rs-v4.0.3.tar.bz2
         </Archive>
         <BuildDependencies>
             <Dependency>rust</Dependency>
@@ -63,6 +63,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2026-11-26</Date>
+            <Version>4.0.3</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
         <Update release="4">
             <Date>2026-10-13</Date>
             <Version>4.0.2</Version>
