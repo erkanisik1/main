@@ -1,0 +1,13 @@
+diff -Nuar a/Cargo.toml b/Cargo.toml
+--- a/Cargo.toml	2026-11-25 00:10:34.000000000 +0300
++++ b/Cargo.toml	2026-11-25 19:41:40.571019424 +0300
+@@ -57,6 +57,9 @@
+ clap = { version = "4.5.56", features = ["derive"] }
+ zbus = { version = "6.2.1", default-features = false, features = ["tokio"] }
+ 
++[profile.release]
++lto = "thin"
++
+ # [patch."https://github.com/pop-os/libcosmic/"]
+ # cosmic-config = { git = "https://github.com/pop-os/libcosmic//", branch = "cosmic-launch" }
+ # cosmic-launch = { git = "https://github.com/pop-os/libcosmic//", branch = "cosmic-launch" }

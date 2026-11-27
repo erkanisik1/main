@@ -13,11 +13,11 @@
         <Summary>An implementation of the Language Server Protocol</Summary>
         <Icon>qt6-languageserver</Icon>
         <Description>An implementation of the Language Server Protocol</Description>
-        <Archive sha1sum="b4f39f406ab6ca5cf0cf3f58be95083a4cd7c6d1" type="tarxz">https://download.qt.io/official_releases/qt/6.11/6.11.3/submodules/qtlanguageserver-everywhere-src-6.11.3.tar.xz</Archive>
+        <Archive sha1sum="3d16462540522c01b7f888eac1d7fe024327fbb6" type="tarxz">https://download.qt.io/official_releases/qt/6.12/6.12.1/submodules/qtlanguageserver-everywhere-src-6.12.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>ninja</Dependency>
             <Dependency>cmake</Dependency>
-            <Dependency versionFrom="6.11.3">qt6-base-devel</Dependency>
+            <Dependency versionFrom="6.12.1">qt6-base-devel</Dependency>
         </BuildDependencies>
         <!--
                 <Patches>
@@ -29,7 +29,7 @@
     <Package>
         <Name>qt6-languageserver</Name>
         <RuntimeDependencies>
-            <Dependency versionFrom="6.11.3">qt6-base</Dependency>
+            <Dependency versionFrom="6.12.1">qt6-base</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -52,6 +52,13 @@
     </Package>
 
     <History>
+        <Update release="24">
+            <Date>2026-11-23</Date>
+            <Version>6.12.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="23">
             <Date>2026-10-29</Date>
             <Version>6.11.3</Version>

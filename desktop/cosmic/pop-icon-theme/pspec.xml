@@ -1,0 +1,48 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pop-icon-theme</Name>
+        <Homepage>https://github.com/pop-os/icon-theme/</Homepage>
+        <Packager>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Packager>
+        <License>CCPL</License>
+        <IsA>library</IsA>
+        <Summary>System76 Pop Icon Theme</Summary>
+        <Description>System76 Pop Simge Teması</Description>
+        <Archive sha1sum="01dbd5d8672be33e9e45a1851da00b44705a54b7" type="targz">https://github.com/pop-os/icon-theme/archive/refs/tags/v3.5.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>git</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>icon-theme-adwaita</Dependency>
+        </BuildDependencies>
+        <!--
+        <Patches>
+            <Patch>pop-icon-theme.patch</Patch>
+            <Patch level="1">pop-icon-theme.patch</Patch>
+        </Patches>
+        -->
+    </Source>
+
+    <Package>
+        <Name>pop-icon-theme</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="icons">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2026-10-01</Date>
+            <Version>3.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

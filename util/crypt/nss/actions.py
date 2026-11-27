@@ -48,7 +48,7 @@ def build():
     autotools.make("-C nss all -j2")
 
 def install():
-    for binary in ["*util", "shlibsign", "signtool", "signver", "ssltap"]:
+    for binary in ["*util", "shlibsign", "signver", "ssltap"]:
         pisitools.insinto("/usr/bin","dist/Linux*/bin/%s" % binary, sym=False)
 
     for lib in ["*.a","*.chk","*.so"]:
